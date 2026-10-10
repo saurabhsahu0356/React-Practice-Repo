@@ -1,10 +1,13 @@
-
+import Nav from "./Components/Nav" 
+import "./index.css";
 const App = () => {
   return (
     <div>
-      <h1> hello babu </h1>
+       <Nav/>
+
     </div>
   )
 }
 
 export default App
+
