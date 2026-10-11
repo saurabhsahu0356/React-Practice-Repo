@@ -3,7 +3,7 @@
 const Nav = () => {
   return (
     <div>
-       this is nav
+       <h1 className="text-5xl"> hello web devloper </h1>
     </div>
   )
 }
