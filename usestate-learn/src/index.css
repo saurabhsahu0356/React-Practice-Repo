@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:rgb(103, 94, 94);
+  color: black;
+  font-family: Arial, sans-serif;
+
+}
+
+#root {
+  min-height: 100vh;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: rgb(70, 171, 147);
+  color:black;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  flex-direction:row;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content:space-evenly;
+  align-items:center;
+}
+
