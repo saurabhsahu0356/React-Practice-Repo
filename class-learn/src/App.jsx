@@ -7,9 +7,10 @@ const App = () => {
   const[userUrl, setuserUrl]=   useState('');
   const[userRole, setuserRole]= useState('');
   const[userDEC, setuserDec]=   useState('');
+ 
+   let localData = JSON.parse(localStorage.getItem('all-user'))||[]
 
-
-  const[allUser, setallUser]=   useState([]);
+  const[allUser, setallUser]=   useState(localData);
 
   function submitForm(e){
     e.preventDefault()
@@ -17,8 +18,8 @@ const App = () => {
     let oldUser= [...allUser]
     oldUser.push({userName, userDEC, userUrl,userRole})
 
-    console.log(oldUser)
     setallUser(oldUser)
+    localStorage.setItem('all-user',JSON.stringify(oldUser))
 
       setuserName('')
       setuserDec ('')
@@ -29,6 +30,7 @@ const App = () => {
       let copyUser= [...allUser]
       copyUser.splice(idx,1)
       setallUser(copyUser)
+      localStorage.setItem('all-user',JSON.stringify(copyUser))
 
   }
   return (
