@@ -1,7 +1,10 @@
 import React from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link, NavLink } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
+import Course from './pages/course'
+import Koder from './pages/Koder'
+
 
 const App = () => {
   return (
@@ -9,14 +12,21 @@ const App = () => {
     <div className='flex justify-between px-7 bg-pink-900  mb-10'>
       <h1> Navbar </h1>
       <div className='flex gap-8'>
-      <input className='border-2 border-black' type='text'/>
-        <Link to='/'> Home pages</Link>
+       <NavLink to='/' style={({isActive})=>({
+        color:isActive?'red': 'white'
+       })}> home pages
+
+       </NavLink>
         <Link to='/about'> About pages</Link>
+         <Link to='/course'> course pages</Link>
       </div>
     </div>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path ='/course' element={<Course/>} />
+        <Route path ='/course/koder' element={<Koder/>} />
+
       </Routes>
     </div>
   )
