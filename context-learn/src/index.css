@@ -1,0 +1,23 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  color: whitesmoke;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+.Sec{
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.Nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
